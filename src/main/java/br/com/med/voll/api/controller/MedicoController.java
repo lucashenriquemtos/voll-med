@@ -4,6 +4,7 @@ import br.com.med.voll.api.medico.Medico;
 import br.com.med.voll.api.medico.MedicoDTO;
 import br.com.med.voll.api.medico.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ public class MedicoController {
     private MedicoRepository medicoRepository;
 
     @PostMapping
+    @Transactional
     public void cadastrar(@RequestBody MedicoDTO medico){
         medicoRepository.save(new Medico(medico));
 

@@ -37,6 +37,6 @@ public class Medico {
         this.crm = medicoDTO.crm();
         this.telefone = medicoDTO.telefone();
         this.especialidade = medicoDTO.especialidade();
-        this.endereco = new Endereco(medicoDTO.enderecoDTO());
+        this.endereco = new Endereco(medicoDTO.endereco());
     }
 }

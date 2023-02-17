@@ -3,6 +3,7 @@ package br.com.med.voll.api.controller;
 import br.com.med.voll.api.medico.Medico;
 import br.com.med.voll.api.medico.MedicoDTO;
 import br.com.med.voll.api.medico.MedicoRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ public class MedicoController {
 
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody MedicoDTO medico){
+    public void cadastrar(@RequestBody @Valid MedicoDTO medico){
         medicoRepository.save(new Medico(medico));
 
     }

@@ -2,6 +2,7 @@ package br.com.med.voll.api.medico;
 
 
 import br.com.med.voll.api.endereco.Endereco;
+import br.com.med.voll.api.endereco.EnderecoDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
